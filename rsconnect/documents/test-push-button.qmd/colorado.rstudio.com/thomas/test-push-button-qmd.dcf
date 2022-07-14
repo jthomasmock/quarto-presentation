@@ -1,0 +1,15 @@
+name: test-push-button-qmd
+title: test-push-button-qmd
+username: thomas
+account: thomas
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 11592
+bundleId: 57616
+url: https://colorado.rstudio.com/rsc/content/6f487f29-5b5f-483d-88df-f8e0dc19f8f2/
+when: 1655318182.87238
+lastSyncTime: 1655318182.87239
+quarto_version: 0.9.577
+quarto_engines: knitr
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,103 @@
+---
+format: 
+  revealjs:
+    self-contained: false
+    height: 1080
+    width: 1920
+knitr: 
+  opts_chunk: 
+    echo: false
+---
+
+
+## {background-color="#303436" background-image="https://images.unsplash.com/photo-1486482044844-888b371f410c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80" background-position="left" background-size="contain"}
+
+
+<!-- <img src="https://images.unsplash.com/photo-1486482044844-888b371f410c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80" height="1080px" style="z-index: 2;"></img> -->
+
+::::{style="position: absolute; left: 500px; top: 200px; height: 525px; width: 1200px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2;"}
+
+[Intro to Quarto]{style="font-size: 150px; font-weight: bold; line-height: 1em; margin: 0px"}
+
+[for RMarkdown and Jupyter users]{style="font-size: 80px; font-weight: bold; line-height: 0.75em;"}
+
+<br>
+
+[Thomas Mock, RStudio]{style="font-size: 60px; font-weight: bold;"}
+
+[`r Sys.Date()`]{style="font-size: 50px;font-weight: bold;"}
+
+::::
+
+## {background-color="#a9bcd2" background-image="out.png" background-size="cover" background-position="top"}
+
+[40]{.div style="display: flex; justify-content: center; position: center; font-size: 400px; font-weight: bold;"}
+
+[New issues generated and solved (most are related to new features or missing existing features)]{.div style="position: absolute; text-align: center; font-size: 80px; width: 1750px; top: 700px; left: 50px;"}
+
+## 
+
+[What was the followup?]{.div style="position: absolute; top: 100px; left: -50px; font-size: 100px; width: 650px; font-weight: bold; height: 2100px; background-color: #303436; padding: 35px; color: white;"}
+
+[`r fontawesome::fa("r-project", height = "100px", fill = "#303436")`]{.div style="position: absolute; width: 60px; top: 100px; right: 1111px;"}
+
+[`r fontawesome::fa("python", height = "100px", fill = "#303436")`]{.div style="position: absolute; width: 60px; top: 500px; right: 1111px;"}
+
+[`r fontawesome::fa("cloud", height = "100px", fill = "#303436")`]{.div style="position: absolute; width: 60px; top: 900px; right: 1111px;"}
+
+[This is a long description, with a good chunk of other stuff]{.div style="position: absolute; text-align: left; font-size: 50px; width: 1000px; top: 100px; left: 900px;"}
+
+[This is a long description, with a good chunk of other stuff]{.div style="position: absolute; text-align: left; font-size: 50px; width: 1000px; top: 500px; left: 900px;"}
+
+[This is a long description, with a good chunk of other stuff]{.div style="position: absolute; text-align: left; font-size: 50px; width: 1000px; top: 900px; left: 900px;"}
+
+## Mask
+
+
+<!-- <div class="container" style='position: absolute; top: 200px; left: 200px;'> -->
+<!-- <svg width="600" height="400"> -->
+<!--   <mask id="svgmask1"> -->
+<!--     <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon> -->
+<!--   </mask> -->
+<!--   <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img_5terre.jpg" mask="url(#svgmask1)"></image> -->
+<!-- </svg> -->
+<!-- </div> -->
+
+<!-- <div class="container"> -->
+<!-- <svg width="600" height="400"> -->
+<!--   <mask id="svgmask2"> -->
+<!--     <polygon fill="#ffffff" points="100,10 40,198 190,78 10,78 160,198"></polygon> -->
+<!--   </mask> -->
+<!--   <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img_5terre.jpg" mask="url(#svgmask2)"></image> -->
+<!-- </svg> -->
+<!-- <div class="container"> -->
+
+<!-- ::: {data-id="box1" style="background: #2780e3; width: 1920px; height: 350px; border-radius: 0px;" style="position: absolute; top: 0px, left: 0px;"} -->
+<!-- ::: -->
+
+<!-- svglite:: -->
+
+
+<svg id='box1' width='2500px' height='500px' style="position:absolute; top: -200px; left:-250px; z-index:-2;">
+<rect width='100%' height='100%' style='stroke: none; fill: #d3d3d3;'/>
+</svg>
+
+<svg width='350px' height='350px' style="position:absolute; top: 25px; left:-50px; z-index:-1;">
+  <rect width='100%' height='100%' x="0" y="0" x="100" style='stroke: none; fill: red;' transform="rotate(45)" style="transform-origin: center; transform-box: file-box;"/>
+</svg>
+
+<svg viewBox="0 0 24 24" width="64" height="64">
+  <polygon points="12 2, 22 22, 2 22" />
+</svg>
+
+## Resources
+
+- https://rstudio-conf-2020.github.io/design-ds-classroom/materials/01-curriculum-design/slides/01-curriculum-design.html#77
+- https://t.co/4nxSVr7wYD
+- https://t.co/8NgkpIl1aT
+- https://t.co/aImQsFaLX2
+-https://speakerdeck.com/smashingmag/responsive-adventures-dirty-tricks-from-the-dark-corners-of-front-end?slide=12
+- https://speakerdeck.com/pedronauck/reactjs-keep-simple-everything-can-be-a-component?slide=4
+- https://speakerdeck.com/erikaheidi/the-art-of-programming-codeland-2020?slide=11
+- https://speakerdeck.com/hatefulcrawdad/stop-working-from-a-prison-cell?slide=34
+- https://speakerdeck.com/morganepeng/we-have-a-design-system-now-what?slide=48

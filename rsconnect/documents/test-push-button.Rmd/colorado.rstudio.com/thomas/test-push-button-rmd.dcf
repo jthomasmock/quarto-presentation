@@ -1,0 +1,13 @@
+name: test-push-button-rmd
+title: test-push-button-rmd
+username: thomas
+account: thomas
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 11591
+bundleId: 57615
+url: https://colorado.rstudio.com/rsc/content/f40f94cc-b6ec-4d24-ad0d-c72678c9f2ed/
+when: 1655318108.60796
+lastSyncTime: 1655318108.60797
+asMultiple: FALSE
+asStatic: FALSE
