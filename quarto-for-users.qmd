@@ -274,8 +274,6 @@ One install, batteries included
 +-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 | HTML Slides     | -   [xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)                                       | -   [revealjs](https://quarto.org/docs/presentations/revealjs/)                    |
 |                 |                                                                                                          |                                                                                    |
-|                 |  |                                                                                    |
-|                 |                                                                                                          |                                                                                    |
 |                 | -   [revealjs](https://bookdown.org/yihui/rmarkdown/revealjs.html)                                       |                                                                                    |
 +-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 | Advanced Layout | -   [tufte](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html)                                    | -   [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
