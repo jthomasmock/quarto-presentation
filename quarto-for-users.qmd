@@ -37,17 +37,19 @@ knitr:
 We *don't* talk about Quarto
 :::
 
+. . .
+
+![](images/quarto-release-one.png){width="1800px" fig-align="center" style="margin-top: 150px;"}
+
 ## {auto-animate=true}
 
 ::: {style="margin-top: 50px; font-size: 2em"}
 We ~~don't~~ talk about Quarto
 :::
 
-. . .
-
 ![](images/quarto-bruno.png){style="position: absolute; top 150;" left="300px" width="1200px" fig-alt="A tweet by Alison Hill revealing her blogpost on Quarto. Over the weekend, I wrote up my notes about using and teaching Quarto, based on my experiences  working with the development team for over a year. I think (hope?) it is safe to talk about it now"}
 
-. . .
+## We ~~don't~~ talk about Quarto
 
 ![](images/quarto-excited-1.png){style="position: absolute; top 150;" left="800px" width="1000px" fig-alt="A tweet by Kelly Bodwin revealing her excitement about Quarto. Did I stay up until 6am before the first night of class converting all my R Markdown materials to @quarto_dev? Yes, yes I did. Do I regret it? No, I do not. It's pretty rad my dudes."}
 
@@ -203,19 +205,21 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 
 [^3]: <https://yihui.org/knitr/demo/pandoc/>
 
-## Quarto - the continuation of a decade of effort
+## Quarto - unification for RMarkdown
 
 We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown.
-
-. . .
 
 ::: r-stack
 ![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
 :::
 
+. . .
+
+RMarkdown and `knitr` are not going away, we're still supporting it!
+
 ## Quarto - extending RMarkdown for other languages
 
-We are meeting Julia/Python users in their **native language**, rather than mandating "use R" to write in their "native tongue"
+We are meeting Julia/Python users in their **native language**
 
 ::: r-stack
 ![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
@@ -253,7 +257,7 @@ One install, batteries included
 
 ## One install, "Batteries included"
 
--   RMarkdown grew into a large ecosystem, with varying syntax.
+-   RMarkdown grew into a large ecosystem, but ended up with incosistent syntax.
 
 . . .
 
@@ -323,13 +327,15 @@ Quarto is a single unified install, comes **"batteries included"** straight out 
 
 ## What to do with my existing `.Rmd` or `.ipynb`?
 
-For some of you - nothing changes! Keep using RMarkdown and Jupyter.
-
-<br>
+RMarkdown (and `knitr`) is not going away!
 
 . . .
 
-However, most existing `.rmd` or `.ipynb` can be rendered as-is via Quarto
+For some of you - nothing changes! Keep using RMarkdown and Jupyter.
+
+. . .
+
+However, most existing `.rmd` or `.ipynb` can be rendered as-is via Quarto or with some editing.
 
 ``` bash
 quarto render my-favorite.rmd --to html
@@ -339,13 +345,31 @@ quarto render my-favorite.rmd --to html
 
 <br>
 
-Since Jupyter notebooks can either be treated as a linear document to be re-executed or an already evaluated document there are additional options like: `--execute`
+Since Jupyter notebooks can either be treated as a linear document to be re-executed or output document there are additional options like: `--execute`
 
 ``` bash
 quarto render my-favorite.ipynb --to html --execute
 ```
 
 . . .
+
+<br>
+
+In fact, Quarto can help convert back and forth between `.qmd` and `.ipynb`:
+
+```bash
+quarto convert --help
+
+Usage:   quarto convert <input>
+
+Description:
+
+    Convert documents to alternate representations.
+
+  Convert notebook to markdown:                  quarto convert mydocument.ipynb                   
+  Convert markdown to notebook:                  quarto convert mydocument.qmd                     
+  Convert notebook to markdown, writing to file: quarto convert mydocument.ipynb --output mydoc.qmd
+```
 
 Quarto comes out of the box with much better accessibility, better defaults, more options, and a much more consistent syntax.
 
