@@ -317,7 +317,7 @@ For some of you - nothing changes! Keep using RMarkdown and Jupyter.
 
 . . .
 
-However, most existing `.rmd` or `.ipynb` can be rendered as-is via Quarto or with some editing.
+However, most existing `.rmd` or `.ipynb` can be rendered as-is via Quarto or with some editing. Quarto comes out of the box with better accessibility, better defaults, more options, and a more consistent syntax.
 
 ``` bash
 quarto render my-favorite.rmd --to html
@@ -333,9 +333,7 @@ Since Jupyter notebooks can either be treated as a linear document to be re-exec
 quarto render my-favorite.ipynb --to html --execute
 ```
 
-. . .
-
-<br>
+## What to do with my existing `.Rmd` or `.ipynb`?
 
 In fact, Quarto can help convert back and forth between `.qmd` and `.ipynb`:
 
@@ -353,7 +351,7 @@ Description:
   Convert notebook to markdown, writing to file: quarto convert mydocument.ipynb --output mydoc.qmd
 ```
 
-Quarto comes out of the box with much better accessibility, better defaults, more options, and a much more consistent syntax.
+
 
 ## What about for Data Science at Work?
 
