@@ -7,7 +7,7 @@ format:
     width: 1920
     logo: https://raw.githubusercontent.com/quarto-dev/quarto-web/c010153bd1e53acf52d565a78b32706325c323cd/quarto.png
     footer: <a href="https://rstd.io/quarto-curious">rstd.io/quarto-curious</a> by [@thomas_mock](https://twitter.com/thomas_mock)
-    slide-number: true
+    slide-number: c/t
 knitr: 
   opts_chunk: 
     echo: false
@@ -207,15 +207,13 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 
 ## Quarto - unification for RMarkdown
 
-We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown.
+We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown via `knitr`.
+
+RMarkdown and `knitr` are not going away, we're still supporting it!
 
 ::: r-stack
 ![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
 :::
-
-. . .
-
-RMarkdown and `knitr` are not going away, we're still supporting it!
 
 ## Quarto - extending RMarkdown for other languages
 
@@ -411,27 +409,3 @@ Follow [\@RStudio](https://twitter.com/rstudio), [\@quarto_pub](https://twitter.
 -   [Quarto.org](https://quarto.org/) for documentation
 -   [Quarto FAQ](https://quarto.org/docs/faq/)
 -   ["With Quarto Coming, is R Markdown Going Away? No." - Yihui.org](https://yihui.org/en/2022/04/quarto-r-markdown/)
-
-## The Questions
-
--   What does "Quarto" mean?
--   Why Quarto?
--   What about my favorite format(s)?
-
-## Why Quarto, when RMarkdown and Jupyter *already* exist?
-
-. . .
-
--   Quarto is the "Next generation of RMarkdown"
-
-. . .
-
--   but RMarkdown (and `knitr`) is not going away
-
-. . .
-
--   And almost all the knowledge you've accumulated along the way is still applicable!
-
-. . .
-
-So let's build up a mental model of what Quarto is and how it relates to RMarkdown and Jupyter...
