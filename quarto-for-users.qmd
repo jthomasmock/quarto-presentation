@@ -2,6 +2,7 @@
 format: 
   revealjs:
     transition: fade
+    auto-stretch: false
     self-contained: true
     height: 1080
     width: 1920
@@ -15,7 +16,7 @@ knitr:
 
 ##  {background-color="#303436" background-image="https://www.folger.edu/sites/default/files/Quarto%20sample%20sheet%20with%20page%20numbers_Page_1.jpg" background-position="left" background-size="contain"}
 
-::: {style="position: absolute; left: 500px; top: 200px; height: 525px; width: 1500px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2;"}
+::: {style="position: absolute; left: 480px; top: 200px; height: 525px; width: 1500px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2; border-radius: 5px;"}
 [Quarto for the curious]{style="font-size: 150px; font-weight: bold; line-height: 1em; margin: 0px"}
 
 <br>
@@ -47,11 +48,19 @@ We *don't* talk about Quarto
 We ~~don't~~ talk about Quarto
 :::
 
-![](images/quarto-bruno.png){style="position: absolute; top 150;" left="300px" width="1200px" fig-alt="A tweet by Alison Hill revealing her blogpost on Quarto. Over the weekend, I wrote up my notes about using and teaching Quarto, based on my experiences  working with the development team for over a year. I think (hope?) it is safe to talk about it now"}
+##
+
+::: {style="margin-top: 50px; font-size: 2em"}
+We ~~don't~~ talk about Quarto
+:::
+
+![](images/quarto-bruno.png){style="position: absolute; top: 150; left: 20px; width: 800px;" fig-alt="A tweet by Alison Hill revealing her blogpost on Quarto. Over the weekend, I wrote up my notes about using and teaching Quarto, based on my experiences  working with the development team for over a year. I think (hope?) it is safe to talk about it now"}
 
 ## We ~~don't~~ talk about Quarto
 
-![](images/quarto-excited-1.png){style="position: absolute; top 150;" left="800px" width="1000px" fig-alt="A tweet by Kelly Bodwin revealing her excitement about Quarto. Did I stay up until 6am before the first night of class converting all my R Markdown materials to @quarto_dev? Yes, yes I did. Do I regret it? No, I do not. It's pretty rad my dudes."}
+<!-- <img src="images/quarto-excited-1.png" style="position: absolute; width: 1000px;" alt-text="A tweet by Kelly Bodwin revealing her excitement about Quarto. Did I stay up until 6am before the first night of class converting all my R Markdown materials to @quarto_dev? Yes, yes I did. Do I regret it? No, I do not. It's pretty rad my dudes."> -->
+
+![](images/quarto-excited-1.png){style="position: absolute; width: 1000px;" top="150;" left="900px" fig-alt="A tweet by Kelly Bodwin revealing her excitement about Quarto. Did I stay up until 6am before the first night of class converting all my R Markdown materials to @quarto_dev? Yes, yes I did. Do I regret it? No, I do not. It's pretty rad my dudes."}
 
 ## We ~~don't~~ talk about Quarto
 
@@ -59,11 +68,11 @@ Others had more questions...
 
 . . .
 
-![](images/quarto-nervous.png){style="position: absolute;" top="250px" left="300px" width="1200px"}
+![](images/quarto-nervous.png){style="position: absolute; top: 250px; left: 20px; width: 1300px;"}
 
 . . .
 
-![](images/quarto-confused-2.png){style="position: absolute; top 150;" left="300px" width="1200px"}
+![](images/quarto-confused-2.png){style="position: absolute; top: 150; left: 20px; width: 1300px;"}
 
 ## What is a "Quarto"?
 
@@ -83,7 +92,7 @@ Others had more questions...
 
 ## Ok, but what _IS_ `Quarto`®?
 
-![](images/quarto-confused-short.png){style="position: absolute; top 150;" left="300px" width="1200px"}
+![](images/quarto-confused-short.png){style="position: absolute; top: 250; left: 20px; width: 1300px;"}
 
 ## Ok, but what _IS_ `Quarto`®?
 
@@ -129,7 +138,7 @@ How do I make a cocktail?
 
 > A Quarto document i.e. a `.qmd` is a plain text file, like a `.rmd`, that can be rendered to many different formats
 
-![](https://quarto.org/docs/get-started/hello/images/rstudio-source-visual.png){width="1200px" fig-align="center" fig-alt="A screenshot of a Visual and Source Quarto document"}
+![](https://quarto.org/docs/get-started/hello/images/rstudio-source-visual.png){width="1600px" fig-align="center" fig-alt="A screenshot of a Visual and Source Quarto document"}
 
 ## Anatomy of a Quarto document
 
@@ -149,8 +158,8 @@ format: html
 #| echo: fenced
 #| eval: true
 library(dplyr)
-mtcars %>% 
-  group_by(cyl) %>%
+mtcars |> 
+  group_by(cyl) |> 
   summarize(mean = mean(mpg), .groups = "drop")
 ```
 
@@ -238,11 +247,11 @@ Comfort of your own workspace
 ## Comfort of your own workspace
 
 ::: r-stack
-![](https://quarto.org/docs/tools/images/rstudio-preview.png){.fragment width="1500" fig-alt="A screenshot of a Quarto document rendered inside RStudio"}
+![](https://quarto.org/docs/tools/images/rstudio-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside RStudio"}
 
-![](https://quarto.org/docs/tools/images/jupyterlab-preview.png){.fragment width="1500" fig-alt="A screenshot of a Quarto document rendered inside JupyterLab"}
+![](https://quarto.org/docs/tools/images/jupyterlab-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside JupyterLab"}
 
-![](https://quarto.org/docs/computations/images/python-vscode.png){.fragment width="1500" fig-alt="A screenshot of a Quarto document rendered inside VSCode"}
+![](https://quarto.org/docs/computations/images/python-vscode.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside VSCode"}
 :::
 
 ##  {background-image="images/bartender-tools.jpg" background-size="cover"}
@@ -304,6 +313,57 @@ One install, batteries included
 +------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | Dashboards       | [flexdashboard](https://pkgs.rstudio.com/flexdashboard/)                         | Fall 2022                                                                       |
 +------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+
+## Built-in tabsets
+
+::: {.panel-tabset}
+
+## Code
+
+```{r penguin-sum}
+#| echo: fenced
+#| eval: false
+penguin_sum <- palmerpenguins::penguins |>
+  group_by(species, sex) |>
+  summarize(
+    n = n(),
+    across(
+      c(body_mass_g, bill_length_mm, flipper_length_mm),
+      list(
+        mean = ~ mean(.x, na.rm = TRUE), 
+        sd = ~ sd(.x, na.rm = TRUE)
+      )
+    ),
+  )
+
+penguin_sum
+```
+
+
+## Output
+
+```{r penguin-sum}
+#| echo: false
+#| eval: true
+```
+
+:::
+
+## Figure Layout
+
+```markdown
+::: {layout-nrow=2}
+![Surus](surus.png)
+
+![Hanno](hanno.png)
+
+![Abdul Abbas](abdul-abbas.png)
+
+![Lin Wang](lin-wang.png)
+:::
+```
+
+![](https://quarto.org/docs/authoring/images/elephant-rows.png){fig-align="center"}
 
 ## What to do with my existing `.Rmd` or `.ipynb`?
 
