@@ -22,13 +22,13 @@ knitr:
 
 [Tom Mock, RStudio PBC]{style="font-size: 60px; font-weight: bold;"}
 
-[`r fontawesome::fa("link", "white", height="45px")` [rstd.io/quarto-curious](https://rstd.io/quarto-curious)]{style="font-size: 60px; font-weight: bold; font-color: white;"}
+<a href="https://rstd.io/quarto-curious">`r fontawesome::fa("link", "white", height="45px")`</a>&nbsp;[rstd.io/quarto-curious]{style="font-size: 60px; font-weight: bold; font-color: white;"}
 
 [2022-07-27]{style="font-size: 50px;font-weight: bold;"}
 :::
 
 ::: footer
-&nbsp;
+[You are sneaky!]{style="color: transparent;"}
 :::
 
 ## {auto-animate=true background-color=black}
@@ -257,23 +257,7 @@ One install, batteries included
 
 ## One install, "Batteries included"
 
--   RMarkdown grew into a large ecosystem, but ended up with incosistent syntax.
-
-. . .
-
-Quarto is a single unified install, comes **"batteries included"** straight out of the box
-
--   HTML reports and websites
--   PDF reports
--   MS Office (Word, Powerpoint)
--   Presentations (Powerpoint, Beamer, `revealjs`)
--   Books
-
-. . .
-
--   Any language, *exact* same approach
-
-## Many Quarto formats
+-   Any language, same syntax and approach
 
 +-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 | Feature         | R Markdown                                                                                               | Quarto                                                                             |
@@ -290,7 +274,7 @@ Quarto is a single unified install, comes **"batteries included"** straight out 
 +-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 | HTML Slides     | -   [xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html)                                       | -   [revealjs](https://quarto.org/docs/presentations/revealjs/)                    |
 |                 |                                                                                                          |                                                                                    |
-|                 | -   [ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)                          |                                                                                    |
+|                 |  |                                                                                    |
 |                 |                                                                                                          |                                                                                    |
 |                 | -   [revealjs](https://bookdown.org/yihui/rmarkdown/revealjs.html)                                       |                                                                                    |
 +-----------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
