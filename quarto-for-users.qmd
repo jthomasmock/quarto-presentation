@@ -1,11 +1,12 @@
 ---
 format: 
   revealjs:
+    transition: fade
     self-contained: true
     height: 1080
     width: 1920
     logo: https://raw.githubusercontent.com/quarto-dev/quarto-web/c010153bd1e53acf52d565a78b32706325c323cd/quarto.png
-    footer: <a href="https://quarto.org">Quarto for the Curious</a> by [@thomas_mock](https://twitter.com/thomas_mock)
+    footer: <a href="http://rstd.io/quarto-curious">rstd.io/quarto-curious</a> by [@thomas_mock](https://twitter.com/thomas_mock)
     slide-number: true
 knitr: 
   opts_chunk: 
@@ -27,10 +28,20 @@ knitr:
 :::
 
 ::: footer
- 
+&nbsp;
 :::
 
-## We [don't]{.fragment .strike} talk about Quarto
+## {auto-animate=true background-color=black}
+
+::: {style="margin-top: 200px; font-size: 3em; color: white;"}
+We *don't* talk about Quarto
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 50px; font-size: 2em"}
+We ~~don't~~ talk about Quarto
+:::
 
 . . .
 
@@ -46,19 +57,15 @@ Others had more questions...
 
 . . .
 
-![](images/quarto-confused-short.png){style="position: absolute; top 150;" left="300px" width="1200px"}
-
-. . .
-
 ![](images/quarto-nervous.png){style="position: absolute;" top="250px" left="300px" width="1200px"}
 
 . . .
 
 ![](images/quarto-confused-2.png){style="position: absolute; top 150;" left="300px" width="1200px"}
 
-## Why "Quarto" as a name?
+## What is a "Quarto"?
 
-## Why "Quarto" as a name?[^1]
+## What is a "Quarto"?[^1]
 
 [^1]: [Why Quarto?](https://quarto.org/docs/faq/#why-the-name-quarto)
 
@@ -72,7 +79,20 @@ Others had more questions...
 :::
 :::
 
+## Ok, but what _IS_ `Quarto`®?
+
+![](images/quarto-confused-short.png){style="position: absolute; top 150;" left="300px" width="1200px"}
+
+## Ok, but what _IS_ `Quarto`®?
+
+> [Quarto® is an open-source scientific and technical publishing system built on Pandoc]{style="font-size:100px;"}
+
+
 ##  {background-image="images/cocktail.png"}
+
+::: {style="position: absolute; margin-top: 10px; font-size: 175px; color: black; background: #ffffff30; text-align: center; width: 100%; padding: 0px; margin-left: 0px; margin-right: 0px;"}
+How do I make a cocktail?
+:::
 
 [Image: Kobby Mendez](https://unsplash.com/photos/xBFTjrMIC0c){style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
 
@@ -80,23 +100,28 @@ Others had more questions...
 
 ![](images/cocktail-diagram.png){width="1500" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
 
+## "Crafting" process for literate programming {background-image="images/rmd-knitr.png" background-size="85%" background-position="center"}
+
+<!-- ![](images/rmd-knitr.png){width="1800" fig-alt="diagram of converting a RMarkdown document via knitr/pandoc into markdown and then into output formats"} -->
+
+
+## "Crafting" process for literate programming {background-image="images/qmd-knitr.png" background-size="85%" background-position="center"}
+
+<!-- ![](images/qmd-knitr.png){width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"} -->
+
+. . .
+
+::: {style="position: absolute; top: 465px; left: 30px; width: 250px; height: 150px; background-color: #fa551b35; z-index: -1;"}
+:::
+
 ## "Crafting" process for literate programming
 
 ::: r-stack
-![](images/rmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a RMarkdown document via knitr/pandoc into markdown and then into output formats"}
 
-![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
+![](images/qmd-jupyter.png){.fragment width="1800" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
 
-![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
-
-![](images/jupyter-alone.png){.fragment width="1500" fig-alt="diagram of converting a Jupyter notebook via pandoc into markdown and then into output formats"}
+![](images/jupyter-alone.png){.fragment width="1800" fig-alt="diagram of converting a Jupyter notebook via pandoc into markdown and then into output formats"}
 :::
-
-## 
-
-[So what is Quarto?]{style="font-size: 100px;"}
-
-> [Quarto® is an open-source scientific and technical publishing system built on Pandoc]{style="font-size:100px;"}
 
 ## So what is Quarto?
 
@@ -156,6 +181,46 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 
 [For *everyone.*]{style="font-size: 300px;"}
 
+## 
+
+### A brief history of `knitr`[^2]
+
+[^2]: [A brief history of R Markdown - Yihui Xie, 2021-09-09](https://slides.yihui.org/2021-Brazilian-R-Day.html#25)
+
+-   2011-10-16: initial development - an engine for dynamic report generation with R
+
+-   2012-01-17: initial CRAN release
+
+-   50 CRAN releases in 10 years https://cran.r-project.org/src/contrib/Archive/knitr/
+
+. . .
+
+### A brief history of `rmarkdown`
+
+-   Initial experiment: `knitr::pandoc()` (2014)[^3]
+
+-   Matured as the `rmarkdown` package (2015)
+
+[^3]: <https://yihui.org/knitr/demo/pandoc/>
+
+## Quarto - the continuation of a decade of effort
+
+We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown.
+
+. . .
+
+::: r-stack
+![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
+:::
+
+## Quarto - extending RMarkdown for other languages
+
+We are meeting Julia/Python users in their **native language**, rather than mandating "use R" to write in their "native tongue"
+
+::: r-stack
+![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
+:::
+
 ##  {background-image="images/bar-faded.png" background-size="cover"}
 
 [Photo by <a href="https://unsplash.com/es/@zerotake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">zero take</a>]{style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
@@ -186,53 +251,13 @@ Comfort of your own workspace
 One install, batteries included
 :::
 
-## 
-
-### A brief history of `knitr`[^2]
-
-[^2]: [A brief history of R Markdown - Yihui Xie, 2021-09-09](https://slides.yihui.org/2021-Brazilian-R-Day.html#25)
-
--   2011-10-16: initial development - an engine for dynamic report generation with R
-
--   2012-01-17: initial CRAN release
-
--   50 CRAN releases in 10 years https://cran.r-project.org/src/contrib/Archive/knitr/
-
-. . .
-
-### A brief history of `rmarkdown`
-
--   Initial experiment: `knitr::pandoc()` (2014)[^3]
-
--   Matured as the `rmarkdown` package (2015)
-
-[^3]: <https://yihui.org/knitr/demo/pandoc/>
-
-## Quarto - the continuation of a decade of effort
-
-We learned from 10 years of literate programming with `knitr` + `rmarkdown`
-
-. . .
-
-::: r-stack
-![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
-:::
-
-## Quarto - the continuation of a decade of effort
-
-We are meeting Julia/Python users in their native language, rather than mandating "use R" to wrap it
-
-::: r-stack
-![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
-:::
-
 ## One install, "Batteries included"
 
 -   RMarkdown grew into a large ecosystem, with varying syntax.
 
 . . .
 
-Quarto is a single platform/language agnostic install, comes **"batteries included"** straight out of the box
+Quarto is a single unified install, comes **"batteries included"** straight out of the box
 
 -   HTML reports and websites
 -   PDF reports
