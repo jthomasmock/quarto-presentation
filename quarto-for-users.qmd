@@ -64,15 +64,24 @@ We ~~don't~~ talk about Quarto
 
 ## We ~~don't~~ talk about Quarto
 
+![](images/jeremy-howard-quarto.png){style="position: absolute; top: 100px; left: 20px; width: 800;"}
+
+. . .
+
+![](images/hamel-quarto.png){style="position: absolute; top: 100px; left: 20px; width: 1000px;"}
+
+## We ~~don't~~ talk about Quarto
+
 Others had more questions...
 
 . . .
 
-![](images/quarto-nervous.png){style="position: absolute; top: 250px; left: 20px; width: 1300px;"}
+![](images/quarto-nervous.png){style="position: absolute; top: 250px; left: 20px; width: 1200px;"}
 
 . . .
 
 ![](images/quarto-confused-2.png){style="position: absolute; top: 150; left: 20px; width: 1300px;"}
+
 
 ## What is a "Quarto"?
 
@@ -92,12 +101,35 @@ Others had more questions...
 
 ## Ok, but what _IS_ `Quarto`®?
 
-![](images/quarto-confused-short.png){style="position: absolute; top: 250; left: 20px; width: 1300px;"}
+![](images/quarto-confused-short.png){style="position: absolute; top: 250; left: 20px; width: 1300px;" alt-text="A tweet by Erwin Lares: #RStats can someone explain to me what's the difference between Quarto and RMarkdown. I saw a tweet about Quarto and now I'm all confused ... What gap is it supposed to fill?"}
 
 ## Ok, but what _IS_ `Quarto`®?
 
 > [Quarto® is an open-source scientific and technical publishing system built on Pandoc]{style="font-size:100px;"}
 
+. . .
+
+Pandoc is a "swiss army knife" for converting simple documents into other formats
+
+. . .
+
+Quarto extends Pandoc with heavy use of pre-processing with Lua filters
+
+. . .
+
+```lua
+function Strong(elem)
+  return pandoc.SmallCaps(elem.c)
+end
+```
+
+. . .
+
+and provides a native publishing workflow
+
+```bash
+quarto publish document.qmd     
+```
 
 ##  {background-image="images/cocktail.png"}
 
@@ -109,14 +141,14 @@ How do I make a cocktail?
 
 ## Crafting a cocktail
 
-![](images/cocktail-diagram.png){width="1500" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
+![](images/cocktail-diagram.png){style="position: absolute; top: 250px; left: 50px; width: 1800px;" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
 
 ## "Crafting" process for literate programming {background-image="images/rmd-knitr.png" background-size="85%" background-position="center"}
 
 <!-- ![](images/rmd-knitr.png){width="1800" fig-alt="diagram of converting a RMarkdown document via knitr/pandoc into markdown and then into output formats"} -->
 
 
-## "Crafting" process for literate programming {background-image="images/qmd-knitr.png" background-size="85%" background-position="center"}
+## "Crafting" process for literate programming {background-image="images/qmd-knitr.jpeg" background-size="85%" background-position="center"}
 
 <!-- ![](images/qmd-knitr.png){width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"} -->
 
@@ -129,12 +161,12 @@ How do I make a cocktail?
 
 ::: r-stack
 
-![](images/qmd-jupyter.png){.fragment width="1800" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
+![](images/qmd-jupyter.jpeg){.fragment width="1800" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
 
-![](images/jupyter-alone.png){.fragment width="1800" fig-alt="diagram of converting a Jupyter notebook via pandoc into markdown and then into output formats"}
+![](images/jupyter-alone.jpeg){.fragment width="1800" fig-alt="diagram of converting a Jupyter notebook via pandoc into markdown and then into output formats"}
 :::
 
-## So what is Quarto?
+## So what is a `.qmd`?
 
 > A Quarto document i.e. a `.qmd` is a plain text file, like a `.rmd`, that can be rendered to many different formats
 
@@ -145,22 +177,24 @@ How do I make a cocktail?
 -   Metadata (YAML)
 
 ``` yaml
----
 format: html
----
+engine: knitr
+```
+
+``` yaml
+engine: jupyter #< for native Python/Julia without requiring R
 ```
 
 . . .
 
 -   Code
 
-```{r}
+```{r cars}
 #| echo: fenced
 #| eval: true
-library(dplyr)
 mtcars |> 
-  group_by(cyl) |> 
-  summarize(mean = mean(mpg), .groups = "drop")
+  dplyr::group_by(cyl) |> 
+  dplyr::summarize(mean = mean(mpg), .groups = "drop")
 ```
 
 . . .
@@ -191,68 +225,6 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 . . .
 
 [For *everyone.*]{style="font-size: 300px;"}
-
-## 
-
-### A brief history of `knitr`[^2]
-
-[^2]: [A brief history of R Markdown - Yihui Xie, 2021-09-09](https://slides.yihui.org/2021-Brazilian-R-Day.html#25)
-
--   2011-10-16: initial development - an engine for dynamic report generation with R
-
--   2012-01-17: initial CRAN release
-
--   50 CRAN releases in 10 years https://cran.r-project.org/src/contrib/Archive/knitr/
-
-. . .
-
-### A brief history of `rmarkdown`
-
--   Initial experiment: `knitr::pandoc()` (2014)[^3]
-
--   Matured as the `rmarkdown` package (2015)
-
-[^3]: <https://yihui.org/knitr/demo/pandoc/>
-
-## Quarto - unification for RMarkdown
-
-We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown via `knitr`.
-
-RMarkdown and `knitr` are not going away, we're still supporting it!
-
-::: r-stack
-![](images/qmd-knitr.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"}
-:::
-
-## Quarto - extending RMarkdown for other languages
-
-We are meeting Julia/Python users in their **native language**
-
-::: r-stack
-![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
-:::
-
-##  {background-image="images/bar-faded.png" background-size="cover"}
-
-[Photo by <a href="https://unsplash.com/es/@zerotake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">zero take</a>]{style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
-
-##  {background-image="images/kitchen-white.png" background-size="cover"}
-
-[[roam in color](https://unsplash.com/photos/z3QZ6gjGRt4)]{style="position: absolute; top: 1050px; left: 1650px; width: 500px; display: inline-block; font-size: 12px; color: white;"}
-
-::: {style="color: white; font-size:220px; font-weight:bold; text-align: center;"}
-Comfort of your own workspace
-:::
-
-## Comfort of your own workspace
-
-::: r-stack
-![](https://quarto.org/docs/tools/images/rstudio-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside RStudio"}
-
-![](https://quarto.org/docs/tools/images/jupyterlab-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside JupyterLab"}
-
-![](https://quarto.org/docs/computations/images/python-vscode.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside VSCode"}
-:::
 
 ##  {background-image="images/bartender-tools.jpg" background-size="cover"}
 
@@ -323,6 +295,7 @@ One install, batteries included
 ```{r penguin-sum}
 #| echo: fenced
 #| eval: false
+library(dplyr, warn.conflicts=FALSE)
 penguin_sum <- palmerpenguins::penguins |>
   group_by(species, sex) |>
   summarize(
@@ -364,6 +337,121 @@ penguin_sum
 ```
 
 ![](https://quarto.org/docs/authoring/images/elephant-rows.png){fig-align="center"}
+
+## Interactivity
+
+- Quarto supports `{htmlwidgets}` and `{shiny}` in R or Jupyter Widgets for Python.
+
+. . .
+
+> Quarto also includes native support for [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript), a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3)
+
+```{ojs}
+//| panel: input
+viewof bill_length_min = Inputs.range(
+  [32, 50], 
+  {value: 35, step: 1, label: "Bill length (min):"}
+)
+viewof islands = Inputs.checkbox(
+  ["Torgersen", "Biscoe", "Dream"], 
+  { value: ["Torgersen", "Biscoe"], 
+    label: "Islands:"
+  }
+)
+```
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs}
+Plot.rectY(filtered, 
+  Plot.binX(
+    {y: "count"}, 
+    {x: "body_mass", fill: "species", thresholds: 20}
+  ))
+  .plot({
+    facet: {
+      data: filtered,
+      x: "sex",
+      y: "species",
+      marginRight: 80
+    },
+    marks: [
+      Plot.frame(),
+    ]
+  }
+)
+```
+
+## Data
+
+```{ojs}
+Inputs.table(filtered)
+```
+
+:::
+
+```{ojs}
+data = FileAttachment("palmer-penguins.csv").csv({ typed: true })
+```
+
+```{ojs}
+filtered = data.filter(function(penguin) {
+  return bill_length_min < penguin.bill_length &&
+         islands.includes(penguin.island);
+})
+```
+
+
+
+## Next-Gen RMarkdown, unification
+
+We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown via `knitr`.
+
+RMarkdown and `knitr` are not going away, we're still supporting it!
+
+![](images/qmd-knitr.png){.fragment width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats" fig-align="center"}
+
+## Next-Gen RMarkdown, extended for everyone
+
+> I feel as if R Markdown’s birth certificate had a letter “R” stamped on it, and Jupyter had a “Python” stamp - Yihui Xie (author of knitr) ^[ [https://yihui.org/en/2022/04/quarto-r-markdown/](https://yihui.org/en/2022/04/quarto-r-markdown/#:~:text=R%20Markdown%E2%80%99s%20birth%20certificate%20had%20a%20letter%20%E2%80%9CR%E2%80%9D%20stamped%20on%20it%2C%20and%20Jupyter%20had%20a%20%E2%80%9CPython%E2%80%9D%20stamp)]
+
+. . .
+
+> The main technical difference between Quarto and R Markdown is that Quarto makes heavy use of Pandoc’s Lua filters. - Yihui Xie ^[ [https://yihui.org/en/2022/04/quarto-r-markdown/](https://yihui.org/en/2022/04/quarto-r-markdown/#:~:text=The%20main%20technical%20difference%20between%20Quarto%20and%20R%20Markdown%20is%20that%20Quarto%20makes%20heavy%20use%20of%20Pandoc%E2%80%99s%20Lua%20filters.)]
+
+
+. . .
+
+We are meeting Julia/Python users in their **native language**
+
+::: r-stack
+![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
+:::
+
+##  {background-image="images/bar-faded.png" background-size="cover"}
+
+[Photo by <a href="https://unsplash.com/es/@zerotake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">zero take</a>]{style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
+
+##  {background-image="images/kitchen-white.png" background-size="cover"}
+
+[[roam in color](https://unsplash.com/photos/z3QZ6gjGRt4)]{style="position: absolute; top: 1050px; left: 1650px; width: 500px; display: inline-block; font-size: 12px; color: white;"}
+
+::: {style="color: white; font-size:220px; font-weight:bold; text-align: center;"}
+Comfort of your own workspace
+:::
+
+## Comfort of your own workspace
+
+::: r-stack
+![](https://quarto.org/docs/tools/images/rstudio-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside RStudio"}
+
+![](https://quarto.org/docs/tools/images/jupyterlab-preview.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside JupyterLab"}
+
+![](https://quarto.org/docs/computations/images/python-vscode.png){.fragment width="1700px" fig-alt="A screenshot of a Quarto document rendered inside VSCode"}
+:::
+
 
 ## What to do with my existing `.Rmd` or `.ipynb`?
 
@@ -409,7 +497,27 @@ Description:
   Convert notebook to markdown, writing to file: quarto convert mydocument.ipynb --output mydoc.qmd
 ```
 
+## Quarto Publish
 
+```bash
+quarto publish --help
+
+  Usage:   quarto publish [provider] [path]
+  Version: 1.0.0                          
+                                           
+
+  Description:
+
+    Publish a document or project. Available providers include:
+                                                               
+     - Quarto Pub (quarto-pub)                                 
+     - GitHub Pages (gh-pages)                                 
+     - RStudio Connect (connect)                               
+     - Netlify (netlify)                                       
+     
+    Accounts are configured interactively during publishing.   
+    Manage/remove accounts with: quarto publish accounts 
+```
 
 ## What about for Data Science at Work?
 
@@ -447,13 +555,16 @@ Description:
 
 Here is the [full contributors list](https://github.com/quarto-dev/quarto-cli/graphs/contributors). Quarto is open source and we welcome contributions in our github repository as well! <https://github.com/quarto-dev/quarto-cli>.
 
-## Want more?
+## Quarto
 
-Follow [\@RStudio](https://twitter.com/rstudio), [\@quarto_pub](https://twitter.com/quarto_pub) or me [\@thomas_mock](https://twitter.com/thomas_mock) on Twitter to stay up to date!
+- Batteries included, shared syntax across output types and languages
+- Choose your own editor and your preferred data science language
+- Better accessibility, richer features and interactivity out of the box
+- More enhancements overtime - RMarkdown still maintained, but majority of new features built into Quarto
+
+Follow [\@quarto_pub](https://twitter.com/quarto_pub) or me [\@thomas_mock](https://twitter.com/thomas_mock) on Twitter to stay up to date!
 
 <br>
-
-. . .
 
 ### rstudio::conf 2022
 
@@ -461,8 +572,6 @@ Follow [\@RStudio](https://twitter.com/rstudio), [\@quarto_pub](https://twitter.
 -   [These are a few of my favorite things (about Quarto presentations)](https://rstudioconf2022.sched.com/event/11ibN/these-are-a-few-of-my-favorite-things-about-quarto-presentations) by Tracy Teal, RStudio PBC
 -   [Literate Programming with Jupyter notebooks and Quarto](https://rstudioconf2022.sched.com/event/11ibe/literate-programming-with-jupyter-notebooks-and-quarto) by Hamel Husain, Fast.ai
 -   [Websites & Books & Blogs, oh my! Creating rich content with Quarto](https://rstudioconf2022.sched.com/event/11ibV/websites-books-blogs-oh-my-creating-rich-content-with-quarto) by Devin Pastoor, RStudio PBC
-
-. . .
 
 ### Web resources
 
