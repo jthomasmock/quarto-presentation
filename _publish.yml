@@ -1,0 +1,4 @@
+- source: test-ojs.qmd
+  quarto-pub:
+    - id: a25d95df-8e42-4208-8575-96d80d978ea3
+      url: 'https://thomasmock.quarto.pub/penguins/'

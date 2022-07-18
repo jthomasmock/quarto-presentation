@@ -40,7 +40,7 @@ We *don't* talk about Quarto
 
 . . .
 
-![](images/quarto-release-one.png){width="1800px" fig-align="center" style="margin-top: 150px;"}
+![](images/quarto-release-one.jpg){width="1800px" fig-align="center" style="margin-top: 150px;"}
 
 ## {auto-animate=true}
 
@@ -54,7 +54,7 @@ We ~~don't~~ talk about Quarto
 We ~~don't~~ talk about Quarto
 :::
 
-![](images/quarto-bruno.png){style="position: absolute; top: 150; left: 20px; width: 800px;" fig-alt="A tweet by Alison Hill revealing her blogpost on Quarto. Over the weekend, I wrote up my notes about using and teaching Quarto, based on my experiences  working with the development team for over a year. I think (hope?) it is safe to talk about it now"}
+![](images/quarto-bruno.jpg){style="position: absolute; top: 150; left: 20px; width: 800px;" fig-alt="A tweet by Alison Hill revealing her blogpost on Quarto. Over the weekend, I wrote up my notes about using and teaching Quarto, based on my experiences  working with the development team for over a year. I think (hope?) it is safe to talk about it now"}
 
 ## We ~~don't~~ talk about Quarto
 
@@ -64,11 +64,11 @@ We ~~don't~~ talk about Quarto
 
 ## We ~~don't~~ talk about Quarto
 
-![](images/jeremy-howard-quarto.png){style="position: absolute; top: 100px; left: 20px; width: 800;"}
+![](images/jeremy-howard-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 800;"}
 
 . . .
 
-![](images/hamel-quarto.png){style="position: absolute; top: 100px; left: 20px; width: 1000px;"}
+![](images/hamel-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 1000px;"}
 
 ## We ~~don't~~ talk about Quarto
 
@@ -76,11 +76,11 @@ Others had more questions...
 
 . . .
 
-![](images/quarto-nervous.png){style="position: absolute; top: 250px; left: 20px; width: 1200px;"}
+![](images/quarto-nervous.jpg){style="position: absolute; top: 250px; left: 20px; width: 1200px;"}
 
 . . .
 
-![](images/quarto-confused-2.png){style="position: absolute; top: 150; left: 20px; width: 1300px;"}
+![](images/quarto-confused-2.jpg){style="position: absolute; top: 150; left: 20px; width: 1300px;"}
 
 
 ## What is a "Quarto"?
@@ -101,7 +101,7 @@ Others had more questions...
 
 ## Ok, but what _IS_ `Quarto`®?
 
-![](images/quarto-confused-short.png){style="position: absolute; top: 250; left: 20px; width: 1300px;" alt-text="A tweet by Erwin Lares: #RStats can someone explain to me what's the difference between Quarto and RMarkdown. I saw a tweet about Quarto and now I'm all confused ... What gap is it supposed to fill?"}
+![](images/quarto-confused-short.jpg){style="position: absolute; top: 250; left: 20px; width: 1300px;" alt-text="A tweet by Erwin Lares: #RStats can someone explain to me what's the difference between Quarto and RMarkdown. I saw a tweet about Quarto and now I'm all confused ... What gap is it supposed to fill?"}
 
 ## Ok, but what _IS_ `Quarto`®?
 
@@ -131,7 +131,7 @@ and provides a native publishing workflow
 quarto publish document.qmd     
 ```
 
-##  {background-image="images/cocktail.png"}
+##  {background-image="images/cocktail.jpg"}
 
 ::: {style="position: absolute; margin-top: 10px; font-size: 175px; color: black; background: #ffffff30; text-align: center; width: 100%; padding: 0px; margin-left: 0px; margin-right: 0px;"}
 How do I make a cocktail?
@@ -141,20 +141,29 @@ How do I make a cocktail?
 
 ## Crafting a cocktail
 
-![](images/cocktail-diagram.png){style="position: absolute; top: 250px; left: 50px; width: 1800px;" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
+![](images/cocktail-diagram.jpg){style="position: absolute; top: 250px; left: 50px; width: 1800px;" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
 
-## "Crafting" process for literate programming {background-image="images/rmd-knitr.png" background-size="85%" background-position="center"}
+## "Crafting" process for literate programming {background-image="images/rmd-knitr.jpg" background-size="85%" background-position="center"}
 
-<!-- ![](images/rmd-knitr.png){width="1800" fig-alt="diagram of converting a RMarkdown document via knitr/pandoc into markdown and then into output formats"} -->
+<!-- ![](images/rmd-knitr.jpg){width="1800" fig-alt="diagram of converting a RMarkdown document via knitr/pandoc into markdown and then into output formats"} -->
 
 
-## "Crafting" process for literate programming {background-image="images/qmd-knitr.jpeg" background-size="85%" background-position="center"}
+## "Crafting" process for literate programming
 
-<!-- ![](images/qmd-knitr.png){width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"} -->
+<!-- ![](images/qmd-knitr.jpg){width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"} -->
+
+<image src="images/qmd-knitr.jpeg" style="position: absolute; top: 220px; left: 50px;" width="1800px"></image>
+
+<!-- ![](images/qmd-knitr.jpeg){style= "position: absolute; top: 400px; left: 0px;" width="1700px"} -->
 
 . . .
 
-::: {style="position: absolute; top: 465px; left: 30px; width: 250px; height: 150px; background-color: #fa551b35; z-index: -1;"}
+::: {style="position: absolute; top: 465px; left: 50px; width: 200px; height: 125px; background-color: #fa551b35; z-index: -1;"}
+:::
+
+. . .
+
+::: {style="position: absolute; top: 440px; left: 950px; width: 350px; height: 175px; background-color: #fa551b35; z-index: -1;"}
 :::
 
 ## "Crafting" process for literate programming
@@ -210,7 +219,7 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 
 > Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into PDF/Word/HTML reports, books, websites, presentations and more!
 
-![](images/quarto-cli-help.png){width="1200px" fig-align="center" fig-alt="A screenshot of a Visual and Source Quarto document"}
+![](images/quarto-cli-help.jpg){width="1200px" fig-align="center" fig-alt="A screenshot of a Visual and Source Quarto document"}
 
 ## So what is Quarto? {background-color="black"}
 
@@ -411,7 +420,7 @@ We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Qu
 
 RMarkdown and `knitr` are not going away, we're still supporting it!
 
-![](images/qmd-knitr.png){.fragment width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats" fig-align="center"}
+![](images/qmd-knitr.jpg){.fragment width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats" fig-align="center"}
 
 ## Next-Gen RMarkdown, extended for everyone
 
@@ -427,14 +436,14 @@ RMarkdown and `knitr` are not going away, we're still supporting it!
 We are meeting Julia/Python users in their **native language**
 
 ::: r-stack
-![](images/qmd-jupyter.png){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
+![](images/qmd-jupyter.jpg){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
 :::
 
-##  {background-image="images/bar-faded.png" background-size="cover"}
+##  {background-image="images/bar-faded.jpg" background-size="cover"}
 
 [Photo by <a href="https://unsplash.com/es/@zerotake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">zero take</a>]{style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
 
-##  {background-image="images/kitchen-white.png" background-size="cover"}
+##  {background-image="images/kitchen-white.jpg" background-size="cover"}
 
 [[roam in color](https://unsplash.com/photos/z3QZ6gjGRt4)]{style="position: absolute; top: 1050px; left: 1650px; width: 500px; display: inline-block; font-size: 12px; color: white;"}
 
@@ -505,9 +514,7 @@ quarto publish --help
   Usage:   quarto publish [provider] [path]
   Version: 1.0.0                          
                                            
-
   Description:
-
     Publish a document or project. Available providers include:
                                                                
      - Quarto Pub (quarto-pub)                                 
@@ -519,24 +526,24 @@ quarto publish --help
     Manage/remove accounts with: quarto publish accounts 
 ```
 
+. . .
+
+![](images/quartopub.jpeg){fig-align="center" fig-width="1000px"}
+
 ## What about for Data Science at Work?
 
--   Quarto can be used in RStudio Team today!
+-   Quarto can be used in the latest version of RStudio Team today!
 
 . . .
 
--   Quarto v1.0 comes pre-installed in RStudio Workbench 2022.07.0 and later. You can use Quarto in RStudio Workbench's RStudio IDE, JupyterLab/Jupyter notebooks, or VSCode.
-
-. . .
-
--   Quarto can be published and re-executed by RStudio Connect!
+![](https://raw.githubusercontent.com/sol-eng/bike_predict/main/img/arrows.drawio.png)
 
 ## Cocktails vs Mixed Drinks
 
 ::: r-stack
-![](images/mixed-drink.png){.fragment width="800px" fig-align="left" alt-text="A tweet by Mara Averick. The tweet is a bunny shaking a shaker and then holding a martini glass. The bunny says 'this is just a mixed drink'"}
+![](images/mixed-drink.jpg){.fragment width="800px" fig-align="left" alt-text="A tweet by Mara Averick. The tweet is a bunny shaking a shaker and then holding a martini glass. The bunny says 'this is just a mixed drink'"}
 
-![](images/cocktail-kuhn.png){.fragment width="1200px" fig-align="left" alt-text="A Tweet by Max Kuhn: There is a growing schism in the tidyverse group about the difference between a cocktail and a mixed drink. The official tidyverse opinion is that a **cocktail is made with love and care**. I assume that a mixed drink is then a lazy, unholy coupling between ingredients and alcohol."}
+![](images/cocktail-kuhn.jpg){.fragment width="1200px" fig-align="left" alt-text="A Tweet by Max Kuhn: There is a growing schism in the tidyverse group about the difference between a cocktail and a mixed drink. The official tidyverse opinion is that a **cocktail is made with love and care**. I assume that a mixed drink is then a lazy, unholy coupling between ingredients and alcohol."}
 :::
 
 ## Quarto, crafted with love and care
@@ -559,22 +566,20 @@ Here is the [full contributors list](https://github.com/quarto-dev/quarto-cli/gr
 
 - Batteries included, shared syntax across output types and languages
 - Choose your own editor and your preferred data science language
-- Better accessibility, richer features and interactivity out of the box
 - More enhancements overtime - RMarkdown still maintained, but majority of new features built into Quarto
 
 Follow [\@quarto_pub](https://twitter.com/quarto_pub) or me [\@thomas_mock](https://twitter.com/thomas_mock) on Twitter to stay up to date!
 
-<br>
+. . .
 
 ### rstudio::conf 2022
 
--   Keynote tomorrow! [Reimagine + Collaborate + Share with Quarto](https://rstudioconf2022.sched.com/event/11iZo/reimagine-collaborate-share-with-quarto) by Mine Cetinkaya-Rundel, RStudio PBC & Julia Stewart Lowndes, Openscapes
+-   [Reimagine + Collaborate + Share with Quarto](https://rstudioconf2022.sched.com/event/11iZo/reimagine-collaborate-share-with-quarto) by Mine Cetinkaya-Rundel, RStudio PBC & Julia Lowndes, Openscapes
 -   [These are a few of my favorite things (about Quarto presentations)](https://rstudioconf2022.sched.com/event/11ibN/these-are-a-few-of-my-favorite-things-about-quarto-presentations) by Tracy Teal, RStudio PBC
 -   [Literate Programming with Jupyter notebooks and Quarto](https://rstudioconf2022.sched.com/event/11ibe/literate-programming-with-jupyter-notebooks-and-quarto) by Hamel Husain, Fast.ai
 -   [Websites & Books & Blogs, oh my! Creating rich content with Quarto](https://rstudioconf2022.sched.com/event/11ibV/websites-books-blogs-oh-my-creating-rich-content-with-quarto) by Devin Pastoor, RStudio PBC
 
 ### Web resources
 
--   [Quarto.org](https://quarto.org/) for documentation
--   [Quarto FAQ](https://quarto.org/docs/faq/)
+-   [Quarto.org](https://quarto.org/) for documentation or the [Quarto FAQ](https://quarto.org/docs/faq/)
 -   ["With Quarto Coming, is R Markdown Going Away? No." - Yihui.org](https://yihui.org/en/2022/04/quarto-r-markdown/)
