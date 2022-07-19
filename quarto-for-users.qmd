@@ -14,7 +14,7 @@ knitr:
     echo: false
 ---
 
-##  {background-color="#303436" background-image="https://www.folger.edu/sites/default/files/Quarto%20sample%20sheet%20with%20page%20numbers_Page_1.jpg" background-position="left" background-size="contain"}
+##  {background-color="#303436" background-image="images/hamlet-quarto.jpeg" background-position="left" background-size="contain"}
 
 ::: {style="position: absolute; left: 480px; top: 200px; height: 525px; width: 1500px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2; border-radius: 5px;"}
 [Quarto for the curious]{style="font-size: 150px; font-weight: bold; line-height: 1em; margin: 0px"}
@@ -200,7 +200,7 @@ engine: jupyter #< for native Python/Julia without requiring R
 
 ```{r cars}
 #| echo: fenced
-#| eval: true
+#| eval: false
 mtcars |> 
   dplyr::group_by(cyl) |> 
   dplyr::summarize(mean = mean(mpg), .groups = "drop")
@@ -412,8 +412,6 @@ filtered = data.filter(function(penguin) {
 })
 ```
 
-
-
 ## Next-Gen RMarkdown, unification
 
 We learned from 10 years of literate programming with `knitr` + `rmarkdown` - Quarto is the continuation and unification of the best parts of RMarkdown via `knitr`.
@@ -438,6 +436,10 @@ We are meeting Julia/Python users in their **native language**
 ::: r-stack
 ![](images/qmd-jupyter.jpg){.fragment width="1500" fig-alt="diagram of converting a Quarto document via Jupyter/pandoc into markdown and then into output formats"}
 :::
+
+## Collaboration between multi-lingual teams
+
+![](images/quarto-python.jpeg)^[Replaced "tookis" with "toolkit"]
 
 ##  {background-image="images/bar-faded.jpg" background-size="cover"}
 

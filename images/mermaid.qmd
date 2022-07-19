@@ -33,7 +33,7 @@ classDef classFile2 color:#17559e,fill:#f1f1f1,stroke:#55a5f6
 
     A(fa:fa-file-code .qmd) -.-> B{{fa:fa-code knitr}}
     B -.-> C(fa:fa-file md)
-    C -.-> D{{pandoc}}
+    C -.-> D{{pandoc with<br>Lua filters}}
     D -->| Report| E[fa:fa-file-pdf, fa:fa-file, fa:fa-file-word]
     D -->|Presentation| F[revealjs, fa:fa-file-powerpoint ]
     D -->|Projects| G[fa:fa-globe,fa:fa-book]
@@ -61,7 +61,7 @@ classDef classFile2 color:#17559e,fill:#f1f1f1,stroke:#55a5f6
 
     A(fa:fa-file-code .qmd) -.-> B{{fa:fa-code jupyter}}
     B -.-> C(fa:fa-file md)
-    C -.-> D{{pandoc}}
+    C -.-> D{{pandoc with<br>Lua filters}}
     D -->| Report| E[fa:fa-file-pdf, fa:fa-file, fa:fa-file-word]
     D -->|Presentation| F[revealjs, fa:fa-file-powerpoint ]
     D -->|Projects| G[fa:fa-globe,fa:fa-book]
@@ -87,10 +87,10 @@ classDef classFile color:#17559e,fill:#f1f1f1,stroke:#55a5f6
 classDef classFile2 color:#17559e,fill:#f1f1f1,stroke:#55a5f6
 
     B{{fa:fa-code jupyter}} -.-> C(fa:fa-file md)
-    C -.-> D{{pandoc}}
+    C -.-> D{{pandoc with<br>Lua filters}}
     D -->| Report| E[fa:fa-file-pdf, fa:fa-file, fa:fa-file-word]
     D -->|Presentation| F[revealjs, fa:fa-file-powerpoint ]
-    D -->|Projects| G[fa:fa-globe,fa:fa-book]
+    D -->|Projects| G[fa:fa-globe,fa:fa-book &nbsp]
 
 %%Style
 
