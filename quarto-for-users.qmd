@@ -131,7 +131,7 @@ and provides a native publishing workflow
 quarto publish document.qmd     
 ```
 
-##  {background-image="images/cocktail.jpg"}
+##  {background-image="images/cocktail.png"}
 
 ::: {style="position: absolute; margin-top: 10px; font-size: 175px; color: black; background: #ffffff30; text-align: center; width: 100%; padding: 0px; margin-left: 0px; margin-right: 0px;"}
 How do I make a cocktail?
@@ -219,7 +219,7 @@ This is a sentence with some **bold text**, some *italic text* and an [image](im
 
 > Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into PDF/Word/HTML reports, books, websites, presentations and more!
 
-![](images/quarto-cli-help.jpg){width="1200px" fig-align="center" fig-alt="A screenshot of a Visual and Source Quarto document"}
+![](images/quarto-help.jpeg){width="1600px" fig-align="center" fig-alt="A screenshot of the output of quarto --help"}
 
 ## So what is Quarto? {background-color="black"}
 
@@ -439,7 +439,7 @@ We are meeting Julia/Python users in their **native language**
 
 ## Collaboration between multi-lingual teams
 
-![](images/quarto-python.jpeg)^[Replaced "tookis" with "toolkit"]
+![](images/quarto-python.jpeg)[Replaced mispelling of "tookis" with "toolkit"]{.aside}
 
 ##  {background-image="images/bar-faded.jpg" background-size="cover"}
 
