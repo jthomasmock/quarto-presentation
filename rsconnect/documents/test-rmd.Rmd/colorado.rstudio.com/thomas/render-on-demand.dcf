@@ -1,0 +1,13 @@
+name: render-on-demand
+title: render-on-demand
+username: thomas
+account: thomas
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 11975
+bundleId: 59242
+url: https://colorado.rstudio.com/rsc/content/5d522b2f-25aa-4d07-9db8-f361f2e612a2/
+when: 1658414032.89168
+lastSyncTime: 1658414032.89168
+asMultiple: FALSE
+asStatic: FALSE

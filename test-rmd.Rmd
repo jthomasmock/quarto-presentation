@@ -1,0 +1,10 @@
+---
+output: html_document
+params:
+  refresh: false
+---
+
+```{r}
+strptime(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/Chicago")
+```
+

@@ -1,0 +1,13 @@
+name: refresh-on-demand
+title: refresh-on-demand
+username: thomas
+account: thomas
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 11974
+bundleId: 59241
+url: https://colorado.rstudio.com/rsc/content/1d9d91db-113b-42df-a2c4-01d75ec2a24d/
+when: 1658413988.08428
+lastSyncTime: 1658413988.08429
+asMultiple: FALSE
+asStatic: FALSE

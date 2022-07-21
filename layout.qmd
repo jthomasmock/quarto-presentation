@@ -1,0 +1,69 @@
+---
+format: html
+execute: 
+  echo: false
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+library(knitr)
+penguins <- palmerpenguins::penguins
+```
+
+```{r}
+bill_len_dep <- ggplot(data = penguins,
+                         aes(x = bill_length_mm,
+                             y = bill_depth_mm,
+                             group = species)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin bill dimensions",
+       subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Bill length (mm)",
+       y = "Bill depth (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+```
+
+```{r}
+flipper_hist <- ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram(aes(fill = species), 
+                 alpha = 0.5, 
+                 position = "identity") +
+  scale_fill_manual(values = c("darkorange","purple","cyan4")) +
+  labs(x = "Flipper length (mm)",
+       y = "Frequency",
+       title = "Penguin flipper lengths")
+```
+
+```{r}
+pen_table <- penguins |> 
+  na.omit() |> 
+  group_by(species, sex) |> 
+  summarize(n = n(), body_mass = mean(body_mass_g), flipper_length = mean(flipper_length_mm)) |> 
+  knitr::kable()
+```
+
+```{r}
+#| label: fig-penguins
+#| fig-cap: Palmer Penguins layout
+#| fig-subcap: 
+#|   - "Penguin appearance by species"
+#|   - "Bill length vs Bill Depth"
+#|   - "Distribution of flipper length"
+#| layout: "[[1], [1,1]]"
+#| column: page
+
+knitr::include_graphics("images/lter_penguins.png")
+bill_len_dep
+flipper_hist
+```
