@@ -41,7 +41,7 @@ We *don't* talk about Quarto
 
 . . .
 
-![](images/quarto-release-one.jpg){fig-align="center" style="margin-top: 100px;"}
+![](images/quarto-release-one.jpg){fig-align="center" style="margin-top: 100px;" fig-alt="A screenshot of the first build of Quarto on Github, v0.1.13"}
 
 ## {auto-animate=true}
 
@@ -65,11 +65,11 @@ We ~~don't~~ talk about Quarto
 
 ## We ~~don't~~ talk about Quarto
 
-![](images/jeremy-howard-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 800;"}
+![](images/jeremy-howard-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 800;" fig-alt="A tweet by Jeremy Howard, FYI nbdev will be moving to Quarto and Fastdoc probably too"}
 
 . . .
 
-![](images/hamel-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 800px;"}
+![](images/hamel-quarto.jpg){style="position: absolute; top: 100px; left: 20px; width: 800px;" fig-alt="A tweet by Hamel Husain, 'I'm going to be announcing an epic new version of nbdev in tihs talk! The next version of nbdev is going to be built on top of Quarto'"}
 
 ## We ~~don't~~ talk about Quarto
 
@@ -77,11 +77,11 @@ Others had more questions...
 
 . . .
 
-![](images/quarto-nervous.jpg){style="position: absolute; top: 250px; left: 20px; width: 1200px;"}
+![](images/quarto-nervous.jpg){style="position: absolute; top: 250px; left: 20px; width: 1200px;" fig-alt="Tweet by Andrew Heiss, I'm seeing more and more .qmd files - I'm tempted to switch to Quarto, is it safe enough to do that now?"}
 
 . . .
 
-![](images/quarto-confused-2.jpg){style="position: absolute; top: 150; left: 20px; width: 1000px;"}
+![](images/quarto-confused-2.jpg){style="position: absolute; top: 150; left: 20px; width: 1000px;" fig-alt="A tweet by Danielle Navarro, I admit I'm curious and want to learn. How much of RMarkdown ecosystem ports over naturall? Can I make xaringan-like slides or is that not feasible right now?"}
 
 
 ## What is a "Quarto"?
@@ -110,27 +110,30 @@ Others had more questions...
 
 . . .
 
-Pandoc is a "swiss army knife" for converting simple documents into other formats
+:::{style="font-size: 75px;"}
+```bash
+pandoc -s MANUAL.txt -o example2.html
+```
+:::
 
 . . .
 
-Quarto extends Pandoc with heavy use of pre-processing with Lua filters
-
-. . .
-
+:::{style="font-size: 75px;"}
 ```lua
 function Strong(elem)
   return pandoc.SmallCaps(elem.c)
 end
 ```
-
+:::
 . . .
 
-and provides a native publishing workflow
+:::{style="font-size: 75px;"}
 
 ```bash
 quarto publish document.qmd     
 ```
+
+:::
 
 ##  {background-image="images/cocktail.png"}
 
@@ -151,7 +154,7 @@ How do I make a cocktail?
 
 <!-- ![](images/qmd-knitr.jpg){width="1800" fig-alt="diagram of converting a Quarto document via knitr/pandoc into markdown and then into output formats"} -->
 
-<image src="images/qmd-knitr.jpeg" style="position: absolute; top: 220px; left: 50px;" width="1800px"></image>
+<image src="images/qmd-knitr.jpeg" style="position: absolute; top: 220px; left: 50px;" width="1800px" alt="diagram of converting a Qmd document via knitr/pandoc into markdown and then into output formats"></image>
 
 <!-- ![](images/qmd-knitr.jpeg){style= "position: absolute; top: 400px; left: 0px;" width="1700px"} -->
 
@@ -351,7 +354,7 @@ flipper_hist
 
 ::: {.column width="60%" fig-align="center"}
 
-![](images/penguin-layout.jpeg)
+![](images/penguin-layout.jpeg){fig-alt="Screenshot of a penguin image and two plots alinged in a Quarto doc"}
 
 :::
 
@@ -445,7 +448,7 @@ We are meeting Julia/Python users in their **native language**
 
 ## Collaboration between multi-lingual teams
 
-![](images/quarto-python.jpeg){style="width: 1200px;"}
+![](images/quarto-python.jpeg){style="width: 1200px;" fig-alt="A tweet by Gordon Shotwell, It's very hard to get Python users to use rmarkdown because you need R to render the document. Having a generic toolkit better for usability and branding."}
 
 [Edit: Replaced mispelling of "tookis" with "toolkit"]{.aside}
 
@@ -549,7 +552,7 @@ Description:
 
 - Affect rendering of specific items
 
-![](https://user-images.githubusercontent.com/104391/178159800-e3b74510-97e7-469c-87cf-b49cac8602f9.png){width=800}
+![](https://user-images.githubusercontent.com/104391/178159800-e3b74510-97e7-469c-87cf-b49cac8602f9.png){width=800 fig-alt="A screenshot of a code chunk"}
 
 :::
 
@@ -595,7 +598,7 @@ quarto publish --help
 
 . . .
 
-![](images/quartopub.jpeg){fig-align="center" style="width: 1200px;"}
+![](images/quartopub.jpeg){fig-align="center" style="width: 1200px;" fig-alt="Screenshot of the quartopub.com website"}
 
 ## What about for Data Science at Work?
 
@@ -603,7 +606,7 @@ quarto publish --help
 
 . . .
 
-![](https://raw.githubusercontent.com/sol-eng/bike_predict/main/img/arrows.drawio.png){style="width: 1300px;"}
+![](https://raw.githubusercontent.com/sol-eng/bike_predict/main/img/arrows.drawio.png){style="width: 1300px;" fig-alt="diagram of Rendering a complex data science workflow via RStudio Connect - Quarto is used as the rendering mechanism for the notebooks and code"}
 
 ## Cocktails vs Mixed Drinks
 
@@ -643,7 +646,7 @@ Follow [\@quarto_pub](https://twitter.com/quarto_pub) or me [\@thomas_mock](http
 
 :::{style="font-size: 30px;"}
 
--   [Reimagine + Collaborate + Share with Quarto](https://rstudioconf2022.sched.com/event/11iZo/reimagine-collaborate-share-with-quarto)
+-   [hello quarto: share • collaborate • teach • reimagine](https://rstudioconf2022.sched.com/event/11iZo/reimagine-collaborate-share-with-quarto)
 -   [These are a few of my favorite things (about Quarto presentations)](https://rstudioconf2022.sched.com/event/11ibN/these-are-a-few-of-my-favorite-things-about-quarto-presentations)
 -   [Literate Programming with Jupyter notebooks and Quarto](https://rstudioconf2022.sched.com/event/11ibe/literate-programming-with-jupyter-notebooks-and-quarto)
 -   [Websites & Books & Blogs, oh my! Creating rich content with Quarto](https://rstudioconf2022.sched.com/event/11ibV/websites-books-blogs-oh-my-creating-rich-content-with-quarto)
