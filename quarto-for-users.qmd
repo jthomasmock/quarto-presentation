@@ -528,6 +528,8 @@ Description:
 
 ::: {.column width="60%"}
 
+
+::: {.fragment}
 ### Shortcodes
 
 - Replace inline "short codes" with output.
@@ -536,8 +538,12 @@ Description:
 {{< fa thumbs-up >}} 
 ```
 
+`r fontawesome::fa("thumbs-up")`
+
+:::
 <br>
 
+:::  {.fragment}
 ### Filters
 
 - Affect rendering of specific items
@@ -546,7 +552,11 @@ Description:
 
 :::
 
+:::
+
 ::: {.column width="40%"}
+
+::: {.fragment}
 
 ### Formats
 
@@ -558,6 +568,8 @@ title: "Cool Company 2022 Presentation"
 format: coolco-revealjs
 ---
 ```
+
+:::
 
 :::
 

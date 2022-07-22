@@ -63,7 +63,7 @@ pen_table <- penguins |>
 #| layout: "[[1], [1,1]]"
 #| column: page
 
-knitr::include_graphics("images/lter_penguins.png")
+knitr::include_graphics("images/smol_penguins.png")
 bill_len_dep
 flipper_hist
 ```

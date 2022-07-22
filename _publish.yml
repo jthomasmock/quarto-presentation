@@ -13,6 +13,8 @@
   quarto-pub:
     - id: fa872e85-a18c-4317-924d-44226ab9c179
       url: 'https://thomasmock.quarto.pub/quarto-for-users-da91/'
+    - id: 7f14b671-27d5-4ec8-b909-8ca5af16444e
+      url: 'https://quartopub.org/sites/thomasmock/quarto-for-users'
 - source: self-contained.qmd
   quarto-pub:
     - id: f45a85e6-87ce-411f-a99b-47bc4ee92041
