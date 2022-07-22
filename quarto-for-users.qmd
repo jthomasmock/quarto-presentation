@@ -318,7 +318,7 @@ Both RStudio and VSCode with the Quarto extension have rich auto-completion
 
 ::::
 
-## Interactivity w/ `{htmlwidgets}` or `shiny`
+## Interactivity with `{htmlwidgets}` or `shiny`
 
 ```{r}
 #| echo: true
@@ -333,7 +333,6 @@ leaflet() %>%
 ```{python}
 #| eval: false
 #| echo: true
-| echo: false
 from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
 m = Map(
   basemap=basemap_to_tiles(
@@ -562,11 +561,11 @@ quarto publish --help
 
 ## What about for Data Science at Work?
 
--   Quarto can be used in the latest version RStudio Workbench (v2022.07.0) and RStudio Connect (v2022.07.0)!
+-   Use Quarto in RStudio Workbench (v2022.07.1) and RStudio Connect (v2022.07.0)!
 
 . . .
 
-![](https://raw.githubusercontent.com/sol-eng/bike_predict/main/img/arrows.drawio.png){style="width: 1300px;" fig-alt="diagram of Rendering a complex data science workflow via RStudio Connect - Quarto is used as the rendering mechanism for the notebooks and code"}^[<https://solutions.rstudio.com/example/bike_predict/>]
+![<https://solutions.rstudio.com/example/bike_predict/>](https://raw.githubusercontent.com/sol-eng/bike_predict/main/img/arrows.drawio.png){style="width: 1300px;" fig-alt="diagram of Rendering a complex data science workflow via RStudio Connect - Quarto is used as the rendering mechanism for the notebooks and code"}
 
 
 
