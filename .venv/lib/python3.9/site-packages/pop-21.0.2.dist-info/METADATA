@@ -1,0 +1,150 @@
+Metadata-Version: 2.1
+Name: pop
+Version: 21.0.2
+Summary: The Plugin Oriented Programming System
+Home-page: https://pop.readthedocs.io
+Author: Thomas S Hatch
+Author-email: thatch@vmware.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: dict-toolbox (>=2.1.2)
+Requires-Dist: lazy-object-proxy
+Requires-Dist: pop-config (>=8.0.2)
+Requires-Dist: pop-loop (>=1.0.3)
+Requires-Dist: PyYAML
+
+====
+POP
+====
+
+Pop is used to express the Plugin Oriented Programming Paradigm. The Plugin
+Oriented Programming Paradigm has been designed to make pluggable software
+easy to write and easy to extend.
+
+Plugin Oriented Programming presents a new way to scale development teams
+and deliver complex software. This is done by making the applications entirely
+out of plugins, and also making the applications themselves natively pluggable
+with each other.
+
+Using Plugin Oriented Programming it then becomes easy to have the best of both
+worlds, software can be built in small pieces, making development easier to
+maintain. The small pieces can then be merged and deployed in a single
+binary, making code deployment easy as well.
+
+All this using Python, one of the world's most popular and powerful programming
+languages.
+
+Getting Started
+===============
+
+A more complete Getting Started Guide is available inside of the documentation
+for ``pop``. The best place to start is in the doc's Getting Started Guide found
+here:
+
+https://pop.readthedocs.io
+
+First off, install ``pop`` from pypi:
+
+.. code-block:: bash
+
+    pip3 install pop
+
+Now all it takes to create a pluggable application is a few lines of code.
+This is the root of every pop project.
+We create a hub, we add dynamic subsystems, and then we call them through the hub's namespace.
+
+.. code-block:: python
+
+    import pop.hub
+
+    hub = pop.hub.Hub()
+    # Dynamic subsystems can now be added to the hub
+    hub.pop.sub.add(dyne_name="my_dynamic_sub")
+    # This hub now exists on the namespace and mirrors the file tree of that sub
+    # the sub "my_dynamic_sub" had a plugin called "init" with a function called "cli" we could do this:
+    hub.my_dynamic_sub.init.cli()
+
+
+Writing your first pop application can be very simple, there is a tool called ``pop-create`` that automates
+much of the groundwork needed to get started with an advanced application.
+
+.. code-block:: bash
+
+    pip3 install pop-create
+
+Now that you have ``pop-create``, use the tool  to bootstrap your project!
+This will make your Python project boiler plate for you!
+
+.. code-block:: bash
+
+    mkdir poppy
+    cd poppy
+    pop-create seed -n poppy
+
+Now you have a ``setup.py`` that file will detect changes to you project and "Just Work".
+Feel free to open it up and fill in some of the blank places, like author name,
+description, etc. The ``pop-create`` program also made your first directories, your
+``run.py`` startup script, everything you need to install your project and the ``pop``
+`conf.py` file used to load in configuration. Running `pop-create` also made a few
+other files, but nothing to worry about now.
+Look at `pop-create <https://gitlab.com/saltstack/pop/pop-create>`__'s documentation
+for more details of what it can do.
+
+Congratulations! You have a ``pop`` project! Now you can run the project:
+
+.. code-block:: bash
+
+    python3 run.py
+
+With a project up and running you can now add more plugins, more code and more
+plugin subsystems!
+
+What Happened?
+==============
+
+Take a look at the `poppy/poppy/init.py` file, your little `run.py` script
+created the `hub`, loaded your first plugin subsystem, `poppy` and called
+the run function therein. This is the starting point for your app.
+
+Next dive into the `pop documentation <https://pop.readthedocs.io>`__, we will take you through how to
+think in Plugin Oriented Programming, helping you see a new way to write
+code that is more flexible and dynamic than anything you have seen before!
+
+Single Binary
+=============
+
+In the first few sentences of this document I promised you a single binary!
+This is easy to do! Just pip install ``tiamat``:
+
+.. code-block:: bash
+
+    pip3 install tiamat
+    tiamat --log-level=debug build -n poppy -r requirements/base.txt
+
+This built a single binary of your program! Now you can run it.
+
+.. code-block:: bash
+
+    ./dist/poppy
+
+Documentation
+=============
+
+Check out the docs for more information:
+
+https://pop.readthedocs.io
+
+There is a much more in depth tutorial here, followed by documents on how to
+think in Plugin Oriented Programming. Take your time to read it, it is not long
+and can change how you look at writing software!
+
+

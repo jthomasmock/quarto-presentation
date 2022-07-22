@@ -1,0 +1,23 @@
+---
+format: html
+jupyter: 
+  kernelspec: 
+    name: ".venv-leaflet"
+    language: "python"
+    display_name: ".venv leaflet"
+---
+
+```{python}
+#| echo: false
+from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
+m = Map(
+  basemap=basemap_to_tiles(
+    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
+  ),
+  center=(38.7818, -77.0147),
+  zoom=4
+)
+m.add_layer(Marker(location=(38.7818, -77.0147)))
+m
+```
+
