@@ -224,7 +224,7 @@ thomasmock$ quarto --help
 ```
 ```code
   Usage:   quarto
-  Version: 1.0.0
+  Version: 1.0.35
 
   Options:
     -h, --help     - Show this help.                            
@@ -488,9 +488,11 @@ For some of you - nothing changes! Keep using RMarkdown and Jupyter.
 
 However, most existing `.rmd` can be rendered as-is via Quarto or with some light editing. Quarto comes out of the box with better accessibility, better defaults, more options, and a more consistent syntax.
 
+::: {style="font-size:75px;"}
 ``` bash
 quarto render my-favorite.rmd --to html
 ```
+:::
 
 ## What to do with my existing `.ipynb`?
 
@@ -501,17 +503,18 @@ You can keep using them!
 <br>
 
 Since Jupyter notebooks can either be treated as a linear document to be re-executed OR as JSON with stored computation, there are additional options like: `--execute`
-
+::: {style="font-size:75px;"}
 ``` bash
 quarto render my-favorite.ipynb --to html --execute
 ```
-
+::: {style="font-size:75px;"}
 . . .
 
 <br>
 
 Quarto can help convert back and forth between plain text `.qmd` and `.ipynb`:
 
+::: {style="font-size:65px;"}
 ```bash
 quarto convert --help
 
@@ -525,6 +528,7 @@ Description:
   Convert markdown to notebook:                  quarto convert mydocument.qmd                     
   Convert notebook to markdown, writing to file: quarto convert mydocument.ipynb --output mydoc.qmd
 ```
+:::
 
 ## Extending Quarto with `extensions`
 
@@ -585,7 +589,7 @@ format: coolco-revealjs
 quarto publish --help
 
   Usage:   quarto publish [provider] [path]
-  Version: 1.0.0                          
+  Version: 1.0.35                          
                                            
   Description:
     Publish a document or project. Available providers include:
