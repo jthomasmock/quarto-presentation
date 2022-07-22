@@ -1,6 +1,7 @@
 ---
 format: 
   revealjs:
+    hash-type: number
     transition: fade
     auto-stretch: false
     self-contained: true
@@ -14,7 +15,7 @@ knitr:
     echo: false
 ---
 
-##  {background-color="#303436" background-image="images/hamlet-quarto.jpeg" background-position="left" background-size="contain"}
+##  {#slide1-id data-menu-title="Start" background-color="#303436" background-image="images/hamlet-quarto.jpeg" background-position="left" background-size="contain"}
 
 ::: {style="position: absolute; left: 480px; top: 200px; height: 525px; width: 1500px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2; border-radius: 5px;"}
 [Quarto for the curious]{style="font-size: 120px; font-weight: bold; line-height: 1em; margin: 0px"}
