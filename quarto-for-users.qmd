@@ -84,7 +84,13 @@ knitr:
 ```bash
 thomasmock$ quarto --help
 ```
-```code
+
+. . .
+
+```{bash}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|9|10|17"
   Usage:   quarto
   Version: 1.0.36
 
