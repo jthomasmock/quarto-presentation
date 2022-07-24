@@ -19,3 +19,7 @@
   quarto-pub:
     - id: f45a85e6-87ce-411f-a99b-47bc4ee92041
       url: 'https://thomasmock.quarto.pub/self-contained-b4d8/'
+- source: quarto-curious.qmd
+  quarto-pub:
+    - id: 35e82784-dd57-4e6a-8f4b-25590b7c870f
+      url: 'https://quartopub.org/sites/thomasmock/quarto-curious'

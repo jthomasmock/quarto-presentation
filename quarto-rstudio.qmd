@@ -1,0 +1,24 @@
+---
+title: "Knitr document"
+format: html
+execute: 
+  warning: false
+---
+
+
+## New Section
+
+Here is more text
+
+```{r}
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE)
+```
+
+```{r}
+summary(airquality)
+```
+
+

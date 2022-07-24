@@ -1,3 +1,3 @@
 # copy
 
-fs::file_copy("quarto-for-users.html", "docs/index.html", overwrite = TRUE)
+fs::file_copy("quarto-curious.html", "docs/index.html", overwrite = TRUE)

@@ -1,0 +1,121 @@
+## {auto-animate=true background-color=black}
+
+::: {style="margin-top: 150px; font-size: 3em; color: white;"}
+We *don't* talk about Quarto
+:::
+
+. . .
+
+![](images/quarto-release-one.jpg){fig-align="center" style="margin-top: 100px;" fig-alt="A screenshot of the first build of Quarto on Github, v0.1.13"}
+
+## {auto-animate=true}
+
+::: {style="margin-top: 50px; font-size: 2em"}
+We ~~don't~~ talk about Quarto
+:::
+
+##
+
+::: {style="margin-top: 50px; font-size: 2em"}
+We ~~don't~~ talk about Quarto
+:::
+
+## Ok, but what _IS_ `Quarto`®?
+
+![](images/quarto-confused-short.jpg){style="position: absolute; top: 250; left: 20px; width: 1300px;" alt-text="A tweet by Erwin Lares: #RStats can someone explain to me what's the difference between Quarto and RMarkdown. I saw a tweet about Quarto and now I'm all confused ... What gap is it supposed to fill?"}
+
+
+
+
+
+## Ok, but what _IS_ `Quarto`®?
+
+> [Quarto® is an open-source scientific and technical publishing system built on Pandoc]{style="font-size:80px;"}
+
+. . .
+
+:::{style="font-size: 75px;"}
+```bash
+pandoc -s MANUAL.txt -o example2.html
+```
+:::
+
+. . .
+
+:::{style="font-size: 75px;"}
+```lua
+function Strong(elem)
+  return pandoc.SmallCaps(elem.c)
+end
+```
+:::
+. . .
+
+:::{style="font-size: 75px;"}
+
+```bash
+quarto publish document.qmd
+```
+
+:::
+
+##  {background-image="images/cocktail.png"}
+
+::: {style="position: absolute; margin-top: 10px; font-size: 125px; color: black; background: #ffffff30; text-align: center; width: 100%; padding: 0px; margin-left: 0px; margin-right: 0px;"}
+How do I make a cocktail?
+:::
+
+[Image: Kobby Mendez](https://unsplash.com/photos/xBFTjrMIC0c){style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
+
+## Crafting a cocktail
+
+![](images/cocktail-diagram.jpg){style="position: absolute; top: 250px; left: 50px; width: 1800px;" fig-alt="diagram of converting liquor, citrus, sugar into delicious cocktails"}
+
+## "Crafting" process for literate programming {background-image="images/rmd-knitr.jpg" background-size="85%" background-position="center" fig-alt="diagram of converting a Rmarkdown document via knitr/pandoc into markdown and then into output formats"}
+
+## Cocktails vs Mixed Drinks
+
+::: r-stack
+![](images/mixed-drink.jpg){.fragment width="800px" fig-align="left" alt-text="A tweet by Mara Averick. The tweet is a bunny shaking a shaker and then holding a martini glass. The bunny says 'this is just a mixed drink'"}
+
+![](images/cocktail-kuhn.jpg){.fragment width="1200px" fig-align="left" alt-text="A Tweet by Max Kuhn: There is a growing schism in the tidyverse group about the difference between a cocktail and a mixed drink. The official tidyverse opinion is that a **cocktail is made with love and care**. I assume that a mixed drink is then a lazy, unholy coupling between ingredients and alcohol."}
+:::
+
+## Figure Layout
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+````code
+```{{r}}
+#| label: fig-penguins
+#| fig-cap: Palmer Penguins layout
+#| fig-subcap:
+#|   - "Penguin appearance by species"
+#|   - "Bill length vs Bill Depth"
+#|   - "Distribution of flipper length"
+#| layout: "[[1], [1,1]]"
+#| column: page
+
+knitr::include_graphics("images/lter_penguins.png")
+bill_len_dep
+flipper_hist
+```
+````
+
+:::
+
+::: {.column width="60%" fig-align="center"}
+
+![](images/penguin-layout.jpeg){fig-alt="Screenshot of a penguin image and two plots alinged in a Quarto doc"}
+
+:::
+
+::::
+
+##  {background-image="images/bar-faded.jpg" background-size="cover"}
+
+
+
+[Photo by <a href="https://unsplash.com/es/@zerotake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">zero take</a>]{style="position: absolute; bottom: -20px; right: -100px; width: 250px; display: inline-block; font-size: 18px; color: white;"}
